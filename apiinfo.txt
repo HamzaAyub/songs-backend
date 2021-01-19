@@ -1,0 +1,11 @@
+
+slider 
+api.php?slider
+
+
+api for featured category
+api.php?featured_category
+
+
+api.php?cat_id=1 (youtube keytword list demo )=> yt_list = 1
+api.php?cat_id=7 (Url list demo) => yt_list = 0

@@ -1,0 +1,15 @@
+<?php 
+
+//Get videos from channel by YouTube Data API
+$API_key    = 'AIzaSyCR5In4DZaTP6IEZQ0r1JceuvluJRzQNLE';
+$maxResults = 20;
+
+$videoList = json_decode(file_get_contents('https://www.googleapis.com/youtube/v3/search?part=snippet&q=php&key=AIzaSyCR5In4DZaTP6IEZQ0r1JceuvluJRzQNLE&maxResults=10&order=Relevance'),true);
+echo "<pre>";
+//print_r($videoList);		
+//exit;
+foreach($videoList['items'] as $item){
+	echo $item['snippet']['title'];		
+	echo "<br>";
+}
+?>
